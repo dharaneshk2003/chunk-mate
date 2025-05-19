@@ -22,15 +22,15 @@ This project is a full-stack web application that allows users to upload `.md` (
 frontend/
 ├── public/
 ├── backend/
-| ├── index.js ← Node.js Express server
-| ├──uploads/ ← Uploaded markdown files
+│ ├── index.js # Node.js Express server
+│ └── uploads/ # Folder for uploaded Markdown files
 ├── src/
+│ ├── App.js # Entry React component
 │ ├── Pages/
-│   ├── MarkdownPreviewer.jsx ← main React component
-│   ├── github-markdown.css ← GitHub-style markdown
-|   ├── ChunkedOutput.js
-| ├── App.js
-| README.md
+│ │ ├── MarkdownPreviewer.jsx # Main UI and logic
+│ │ ├── ChunkedOutput.js # Chunk/table rendering logic
+│ │ └── github-markdown.css # GitHub-style markdown styling
+└── README.md
 
 
 ---
