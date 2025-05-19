@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Markdown Table & Chunk Extractor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a full-stack web application that allows users to upload `.md` (Markdown) files and visually extract:
 
-## Available Scripts
+- 📋 **Tables** (in JSON-like format)
+- 🧩 **Paragraph Chunks** (with heading context)
+- 🔁 Interact with both using buttons to toggle visibility and highlight selection
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+✅ Upload `.md` files  
+✅ Extract Markdown tables and display as interactive JSON tables  
+✅ Parse non-table paragraphs into contextual "chunks"  
+✅ Toggle visibility of each chunk or table  
+✅ Highlight selected blocks on button click  
+✅ Displays original Markdown content with GitHub-like styling
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🏗️ Project Structure
 
-### `npm test`
+frontend/
+├── public/
+├── backend/
+| ├── index.js ← Node.js Express server
+| ├──uploads/ ← Uploaded markdown files
+├── src/
+│ ├── Pages/
+│   ├── MarkdownPreviewer.jsx ← main React component
+│   ├── github-markdown.css ← GitHub-style markdown
+|   ├── ChunkedOutput.js
+| ├── App.js
+| README.md
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🔧 Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ⚛️ React
+- 🖋️ React-Markdown + remark-gfm
+- 🗂️ Express.js (Node.js)
+- 📄 Multer for file upload
+- 🎨 CSS-in-JS styling
+- 🔄 RESTful API integration
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Clone the repo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/dharaneshk2003/chunk-mate/
+cd chunk-mate
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+cd backend
+npm install
+node server.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Server runs at: http://localhost:3000
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm install
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Client runs at: http://localhost:3001 or similar
 
-### Code Splitting
+## Example Table
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Name     | Age | City         |
+|----------|-----|--------------|
+| Alice    | 30  | New York     |
+| Bob      | 25  | San Francisco |
 
-### Analyzing the Bundle Size
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Feature: Login  
+Description: Auth with UI  
+Status: Done
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
