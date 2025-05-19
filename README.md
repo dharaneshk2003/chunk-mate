@@ -18,7 +18,7 @@ This project is a full-stack web application that allows users to upload `.md` (
 ---
 
 ## 🏗️ Project Structure
-
+```bash
 -frontend/
 -├── public/
 -├── backend/
@@ -33,6 +33,8 @@ This project is a full-stack web application that allows users to upload `.md` (
 -└── README.md
 
 ---
+
+```
 
 ## 🔧 Technologies Used
 
